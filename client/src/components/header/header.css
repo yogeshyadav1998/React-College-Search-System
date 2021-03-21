@@ -1,0 +1,10 @@
+.header{
+    display: block;
+    margin-top: 0;
+    padding: 1vh 0;
+    width: 100%;
+    font-size: 5vh;
+    text-align: center;
+    color: aliceblue;
+    background-color: rgb(30, 120, 148);
+}
