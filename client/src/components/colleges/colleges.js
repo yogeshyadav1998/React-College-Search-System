@@ -3,9 +3,13 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 
 const Colleges = () =>{
-    const colleges = useSelector((state)=> state.College)
+    const colleges = useSelector((state)=> state.all_colleges)
     console.log(colleges);
     return(
-        <College/>
+       <div>
+           hii
+       </div>
     )
 }
+
+export default  Colleges;

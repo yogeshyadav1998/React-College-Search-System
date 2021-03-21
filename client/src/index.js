@@ -12,9 +12,7 @@ import App from './App';
 const store = createStore(reducers,compose(applyMiddleware(thunk)))
 
 const app = <Provider store = {store}>
-        <BrowserRouter>
-            <App/>
-        </BrowserRouter>
+        <App/>
     </Provider>
 
 ReactDom.render(app, document.getElementById('root'));

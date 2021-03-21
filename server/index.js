@@ -7,11 +7,11 @@ import collegeRoutes from './routes/college.js';
 
 const app = express();
 
-app.use('/college',collegeRoutes)
-
 app.use(bodyParser.json({limit : "30mb", extended: true}));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true}));
 app.use(cors());
+
+app.use('/college',collegeRoutes)
 
 const CONNECTION_URL = 'mongodb+srv://YogeshYadav:Yogesh@1998@cluster0.23vqe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;

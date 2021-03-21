@@ -1,7 +1,15 @@
-const reducer = (state, action) =>{
+const initialState = {
+    all_colleges: []
+}
+
+const reducer = (state = initialState, action) =>{
     switch(action.type){
         case 'FETCH_ALL':
-                return action.payload;
+            console.log("in reducer");
+                return {
+                    ...state,
+                    all_colleges: action.payload
+                };
         case 'FETCH_WITH_ID':
                 return state;
         case 'FETCH_WITH_NAME':
@@ -9,7 +17,7 @@ const reducer = (state, action) =>{
         case 'FETCH_SIMILAR':
                 return state;
         default:
-            break;
+            return state;
     }
 }
 

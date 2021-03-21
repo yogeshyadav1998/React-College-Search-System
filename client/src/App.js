@@ -13,7 +13,8 @@ const App = () =>{
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        dispatch(getAllColleges);
+        console.log("in app")
+        dispatch(getAllColleges());
     })
 
     return (
