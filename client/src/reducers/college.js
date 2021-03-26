@@ -1,5 +1,6 @@
 const initialState = {
-    all_colleges: []
+    all_colleges: [],
+    searched_Id: null,
 }
 
 const reducer = (state = initialState, action) =>{

@@ -1,13 +1,13 @@
 import React, { Component} from 'react';
 
 import './dashboard.css';
+import {connect} from 'react-redux';
 import Colleges from '../colleges/colleges';
 import {Row, Input, Button, Form} from 'antd';
 
-
 class dashboard extends Component{
     state = {
-        searched_Id: null,
+        searched_col: null,
     }
 
     inputChangehandler = input => event =>{
@@ -15,7 +15,14 @@ class dashboard extends Component{
     }
 
     searchHandler = (event) =>{
-
+        const colleges = this.props.colleges;
+        const searched = colleges.filter((college)=>{
+            return (
+                college.name.includes(this.state.searched_col) ||
+                college.id.includes(this.state.searched_col)
+            );
+        })
+        console.log(searched)
     }
 
     render(){
@@ -26,7 +33,7 @@ class dashboard extends Component{
                 </Row>
                 <Row className="search_form">
                     <Form>
-                        <Input value={this.state.searched_Id} onChange={this.inputChangehandler('searched_Id')} size="large" placeholder="College ID/ Name" />
+                        <Input value={this.state.searched_col} onChange={this.inputChangehandler('searched_col')} size="large" placeholder="College ID/ Name" />
                         <Button onClick={this.searchHandler} shape="circle" icon="search" />
                     </Form>
                 </Row>
@@ -38,4 +45,8 @@ class dashboard extends Component{
     }
 }
 
-export default dashboard;
+const mapStateToProps = state => ({
+    colleges: state.all_colleges
+  });
+
+export default connect(mapStateToProps,null)(dashboard);
