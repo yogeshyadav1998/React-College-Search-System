@@ -5,16 +5,10 @@ import './header.css';
 
 function Header (){
     return (
-        <div className="header">
-            <Row className="header_container">
-                <Col offset="12">
-                    <Icon type="stock" style={{padding:"0 10px"}} />
-                    <p className="app_title">
-                        College Details System
-                    </p>
-                </Col>
-            </Row>
-        </div>
+        <Row className="header">
+            <Icon className="Icon" type="stock" />
+            <h1>College Details System</h1>
+        </Row>
     );
 }
 

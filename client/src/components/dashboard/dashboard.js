@@ -3,7 +3,7 @@ import React, { Component} from 'react';
 import './dashboard.css';
 import {connect} from 'react-redux';
 import Colleges from '../colleges/colleges';
-import {Row, Input, Button, Form} from 'antd';
+import {Row, Col, Button, Form} from 'antd';
 
 class dashboard extends Component{
     state = {
@@ -27,20 +27,18 @@ class dashboard extends Component{
 
     render(){
         return(
-            <div className="dashboard">
-                <Row>
-                    Looking For College !!
-                </Row>
-                <Row className="search_form">
-                    <Form>
-                        <Input value={this.state.searched_col} onChange={this.inputChangehandler('searched_col')} size="large" placeholder="College ID/ Name" />
-                        <Button onClick={this.searchHandler} shape="circle" icon="search" />
+            <Row className="dashboard">
+                <Col className="graph-section" >
+                    <img src="./images/graph.png"/>
+                </Col>
+                <Col className="search-section">
+                    <h1>Search College</h1>
+                    <Form className="search-form">
+                        <input  value={this.state.searched_col} onChange={this.inputChangehandler('searched_col')} size="large" placeholder="College ID/ Name" />
+                        <Button className="search-button" onClick={this.searchHandler} shape="circle" icon="search" />
                     </Form>
-                </Row>
-                <Row>
-                    <Colleges/>
-                </Row>
-            </div>
+                </Col>
+            </Row>
         )
     }
 }
