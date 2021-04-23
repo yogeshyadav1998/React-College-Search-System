@@ -1,0 +1,23 @@
+.navbar {
+	height: 100px;
+	text-align: center;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 2.25vw;
+	background-image: linear-gradient(to right, lightgreen, lightblue);
+}
+
+.logo {
+	cursor: pointer;
+	width: max-content;
+	margin: auto;
+	/* background: -webkit-linear-gradient(lightpink, lightgreen);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; */
+}
+
+@media (max-width: 500px) {
+	.navbar {
+		font-size: 6vw;
+		height: 80px;
+	}
+}
