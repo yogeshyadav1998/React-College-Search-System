@@ -1,5 +1,5 @@
 const College = require("../Models/College");
-const { sortByCountry } = require("../Helpers/Sorts");
+const { sortByCountry } = require("./Sorts");
 const data = require("../data.json");
 const { create } = require("./Student");
 exports.create = async (req, res) => {

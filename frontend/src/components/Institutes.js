@@ -86,8 +86,6 @@ class Institutes extends Component {
 					{this.state.data.length > 0 && (
 						<PieChart
 							data={this.state.data}
-							animate
-							animationDuration={1000}
 							onClick={(e, segmentIndex) => {
 								console.log(segmentIndex);
 								this.setState({ visible: true, currentState: segmentIndex });
@@ -108,8 +106,6 @@ class Institutes extends Component {
 					{this.state.courses.length > 0 && (
 						<PieChart
 							data={this.state.courses}
-							animate
-							animationDuration={1000}
 							onClick={(e, segmentIndex) =>
 								this.setState({ visible2: true, currentCourse: segmentIndex })
 							}

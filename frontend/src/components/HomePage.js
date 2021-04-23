@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styles from "../css/HomePage.module.css";
-import institutes from "../assets/institutes.svg";
-import trends from "../assets/trends.svg";
 import { Button, Modal } from "antd";
 import { getColleges } from "./backendApis";
 import Institutes from './Institutes';

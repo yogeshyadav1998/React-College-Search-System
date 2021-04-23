@@ -109,40 +109,16 @@ class Institute extends Component {
 						<img
 							src="https://1635225677.rsc.cdn77.org/images/indian-college-search.jpg?1449039814"
 							alt=""
-							style={{ width: "70%", margin: "auto" }}
+							style={{ width: "70%", margin: "auto", borderRadius: "15px" }}
 						/>
 					</div>
-					<div style={{ padding: 15 }}>
+					<div style={{ padding: 15 , display: "block"}}>
 						<p>{`College Name: ${this.state.clgData.Name}`}</p>
 						<p>{`Courses offered: ${courses}`}</p>
 						<p>{`City: ${this.state.clgData.City}`}</p>
 						<p>{`State: ${this.state.clgData.State}`}</p>
 						<p>{`Country: ${this.state.clgData.Country}`}</p>
 					</div>
-				</div>
-				<div style={{ textAlign: "center" }}>
-					<div
-						className={styles.studentsTitle}
-					>{`Students of ${this.state.clgData.Name}`}</div>
-					<Table
-						key="students"
-						scroll
-						dataSource={this.state.studentData}
-						columns={studentCols}
-						style={{
-							width: window.innerWidth > 500 ? "80%" : "90%",
-							margin: "auto",
-							cursor: "pointer",
-						}}
-						onRow={(record, rowIndex) => {
-							return {
-								onClick: (event) => {
-									this.setState({ visible: true, studentIndex: rowIndex });
-								},
-							};
-						}}
-					/>
-					;
 				</div>
 				<div style={{ textAlign: "center" }}>
 					<div className={styles.similarTitle}>Similar colleges</div>
