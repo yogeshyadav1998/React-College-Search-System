@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import styles from "../css/Navbar.module.css";
+import {StockOutlined} from '@ant-design/icons';
 
 class NavBar extends Component {
 	state = {};
 	render() {
 		return (
 			<header className={styles.navbar}>
+				
 				<h1 className={styles.logo} onClick={() => (window.location = "/")}>
-					CollegeCommunity
+					<StockOutlined style={{fontSize: "1em", margin:"2px"}} />
+					College Details System
 				</h1>
 			</header>
 		);

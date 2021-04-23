@@ -4,6 +4,7 @@ import institutes from "../assets/institutes.svg";
 import trends from "../assets/trends.svg";
 import { Button, Modal } from "antd";
 import { getColleges } from "./backendApis";
+import Institutes from './Institutes';
 
 const HomePage = () => {
 	const [visible, setVisible] = useState(false);
@@ -41,18 +42,12 @@ const HomePage = () => {
 			<div className={styles.home}>
 				<div className={styles.institutes}>
 					<div>
-						<h1>Browse through colleges</h1>
+						<h1>Search colleges</h1>
 						<h2 style={{ color: "#4141ac" }}>
-							Browse through various colleges across countries which will help
-							you decide what suits you best !!!
+							find among various colleges across countries which will suits you best !!!
 						</h2>
-						<img
-							src={institutes}
-							alt=""
-							style={{ width: "80%", margin: "60px auto" }}
-						/>
 						<Button
-							type="primary"
+							type="danger"
 							onClick={() => {
 								setVisible(true);
 								getClgs();
@@ -62,27 +57,8 @@ const HomePage = () => {
 						</Button>
 					</div>
 				</div>
-				<div className={styles.students}>
-					<div>
-						<img
-							src={trends}
-							alt=""
-							style={{ width: "80%", margin: "60px auto" }}
-						/>
-						<Button
-							type="primary"
-							onClick={() => (window.location = "/institutes")}
-						>
-							KNOW MORE
-						</Button>
-						<h1 style={{ color: "#4141ac" }}>Check out college statistics</h1>
-						<h2>
-							Take a look at the college statistics by state and by course and
-							thereby make an informed decision on where to join !!!
-						</h2>
-					</div>
-				</div>
 			</div>
+			<Institutes/>
 		</div>
 	);
 };

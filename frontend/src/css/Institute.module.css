@@ -7,14 +7,14 @@
 }
 
 .collegeCard > div:nth-child(1) {
-	background-color: black;
+	background-color: rgb(218, 174, 132);
 	height: 50%;
 	border-radius: 20px 20px 0 0;
 }
 
 .collegeCard > div:nth-child(2) {
-	background-color: black;
-	color: white;
+	background-color: rgb(218, 174, 132);
+	color: black;
 	height: 50%;
 	text-align: center;
 	font-family: Georgia, "Times New Roman", Times, serif;

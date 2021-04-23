@@ -103,11 +103,11 @@ class Institute extends Component {
 		}
 
 		return (
-			<div style={{ paddingBottom: 60, backgroundColor: "lightblue" }}>
+			<div style={{ paddingBottom: 60, backgroundColor: "rgb(226, 153, 58)" }}>
 				<div className={styles.collegeCard}>
 					<div style={{ display: "flex", padding: 20 }}>
 						<img
-							src={college}
+							src="https://1635225677.rsc.cdn77.org/images/indian-college-search.jpg?1449039814"
 							alt=""
 							style={{ width: "70%", margin: "auto" }}
 						/>

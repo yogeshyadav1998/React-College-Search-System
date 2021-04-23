@@ -1,3 +1,18 @@
+.summary{
+	border: 3px solid grey;
+	border-radius: 15px;
+	margin: 20px;
+	padding: 10px;
+}
+
+.summary > h1{
+	width: 100%;
+	text-align: center;
+	font-family: cursive;
+	letter-spacing: 2px;
+	color: rgb(231, 136, 46);
+}
+
 .pieCharts {
 	display: flex;
 	flex-direction: row;

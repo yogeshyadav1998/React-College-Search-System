@@ -1,16 +1,17 @@
 .home {
 	display: flex;
 	flex-direction: row;
-	background-image: linear-gradient(to right, lightblue, lightgreen);
 	width: 95%;
 	margin: auto;
 	border-radius: 25px;
 }
 
+
+
 .institutes {
 	/* background-color: lightpink; */
-	width: 50%;
-	margin: 60px auto;
+	width: 70%;
+	margin: 10px auto;
 }
 
 .institutes > div {
@@ -22,7 +23,7 @@
 }
 
 .institutes > div > button {
-	background-color: lightgreen;
+	background-color: rgb(226, 153, 58);
 	color: black;
 	height: 50px;
 	font-family: Georgia, "Times New Roman", Times, serif;

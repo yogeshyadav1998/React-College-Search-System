@@ -79,19 +79,15 @@ class Institutes extends Component {
 			});
 		}
 		return (
+			<div className={styles.summary}>
+			<h1 >All Colleges Summary</h1>
 			<div className={styles.pieCharts}>
 				<div className={styles.colleges}>
-					<h1>
-						{`Pie Chart of colleges in each state(${
-							window.innerWidth > 500 ? "hover over" : "click on"
-						} a segment to know
-						which state that segment represents)`}
-					</h1>
 					{this.state.data.length > 0 && (
 						<PieChart
 							data={this.state.data}
 							animate
-							animationDuration={2000}
+							animationDuration={1000}
 							onClick={(e, segmentIndex) => {
 								console.log(segmentIndex);
 								this.setState({ visible: true, currentState: segmentIndex });
@@ -106,13 +102,14 @@ class Institutes extends Component {
 							}}
 						/>
 					)}
+					<h1>Colleges Summary</h1>
 				</div>
 				<div className={styles.courses}>
 					{this.state.courses.length > 0 && (
 						<PieChart
 							data={this.state.courses}
 							animate
-							animationDuration={2000}
+							animationDuration={1000}
 							onClick={(e, segmentIndex) =>
 								this.setState({ visible2: true, currentCourse: segmentIndex })
 							}
@@ -123,17 +120,12 @@ class Institutes extends Component {
 							}
 							labelPosition={75}
 							labelStyle={{
-								fontSize: window.innerWidth > 500 ? "0.3vw" : "1vw",
+								fontSize: window.innerWidth > 500 ? "0.1vw" : "0.5vw",
 								fontFamily: "Georgia",
 							}}
 						/>
 					)}
-					<h1>
-						{`Course Popularity among colleges(${
-							window.innerWidth > 500 ? "hover over" : "click on"
-						} a segment to know which
-						course that segment represents)`}
-					</h1>
+					<h1>Courses Summary</h1>
 				</div>
 				{this.state.currentState >= 0 && (
 					<Modal
@@ -160,6 +152,7 @@ class Institutes extends Component {
 					</Modal>
 				)}
 			</div>
+		</div>
 		);
 	}
 }
