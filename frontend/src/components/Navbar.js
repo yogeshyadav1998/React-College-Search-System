@@ -10,7 +10,7 @@ class NavBar extends Component {
 				
 				<h1 className={styles.logo} onClick={() => (window.location = "/")}>
 					<StockOutlined style={{fontSize: "1em", margin:"2px"}} />
-					College Details System
+					College Search System
 				</h1>
 			</header>
 		);
